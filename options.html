@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Easy Files – Configurações</title>
+<style>
+  :root { color-scheme: dark; }
+  body { font: 14px/1.5 system-ui, "Segoe UI", sans-serif; background: #1c1b24; color: #ecebf3; max-width: 640px; margin: 32px auto; padding: 0 16px; }
+  h1 { font-size: 20px; }
+  label { display: block; margin: 18px 0 6px; font-weight: 600; }
+  textarea, input[type=number] { width: 100%; background: #262532; color: inherit; border: 1px solid #3d3c4d; border-radius: 8px; padding: 10px; font: 13px ui-monospace, Consolas, monospace; }
+  input[type=number] { width: 120px; }
+  .hint { color: #a3a1b5; font-size: 13px; }
+  button { margin-top: 20px; background: #fb542b; color: #fff; border: 0; border-radius: 8px; padding: 9px 18px; font-weight: 600; cursor: pointer; }
+  #ok { margin-left: 10px; color: #7bd88f; }
+</style>
+</head>
+<body>
+  <h1>Easy Files</h1>
+  <p class="hint">Ao clicar em qualquer botão de anexar, aparece um painel com a imagem da área de transferência e os arquivos mais recentes. Segure <b>Shift</b> ao clicar para abrir o seletor normal do Windows.</p>
+
+  <label for="folders">Pastas monitoradas (uma por linha)</label>
+  <textarea id="folders" rows="5"></textarea>
+
+  <label for="max">Quantidade máxima de arquivos</label>
+  <input id="max" type="number" min="4" max="100">
+
+  <label><input id="hist" type="checkbox"> Incluir também o histórico de downloads do Brave</label>
+
+  <button id="save">Salvar</button><span id="ok"></span>
+  <p class="hint" id="perm"></p>
+
+  <script src="config.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

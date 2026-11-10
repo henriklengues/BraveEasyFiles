@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Easy Files</title>
+<link rel="stylesheet" href="picker.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <button id="all" class="btn">Exibir todos os arquivos</button>
+      <span class="sp"></span>
+      <button id="opts" class="icon" title="Configurações">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M19.4 13a7.6 7.6 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.4 7.4 0 0 0-1.7-1L15 3h-4l-.4 2.7a7.4 7.4 0 0 0-1.7 1l-2.5-1-2 3.5L6.6 11a7.6 7.6 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1a7.4 7.4 0 0 0 1.7 1L11 21h4l.4-2.7a7.4 7.4 0 0 0 1.7-1l2.5 1 2-3.5zM13 15.5A3.5 3.5 0 1 1 13 8.5a3.5 3.5 0 0 1 0 7z" transform="translate(-1 0)"/></svg>
+      </button>
+      <button id="close" class="icon" title="Fechar (Esc)">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7l1.4-1.4 6.3 6.3 6.3-6.3z" transform="translate(1.4 0)"/></svg>
+      </button>
+    </header>
+    <main id="grid"></main>
+    <footer id="multi" hidden>
+      <span id="count"></span>
+      <button id="attach" class="btn primary">Anexar</button>
+    </footer>
+  </div>
+  <script src="config.js"></script>
+  <script src="picker.js"></script>
+</body>
+</html>

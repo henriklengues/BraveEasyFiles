@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Easy Files",
+  "version": "1.0.0",
+  "description": "Ao clicar em um botão de anexar arquivo, mostra o print da área de transferência e os arquivos recentes (estilo Opera GX).",
+  "permissions": ["downloads", "clipboardRead", "storage", "offscreen"],
+  "host_permissions": ["file:///*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["main.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "web_accessible_resources": [
+    { "resources": ["picker.html"], "matches": ["<all_urls>"], "use_dynamic_url": true }
+  ],
+  "options_page": "options.html"
+}
