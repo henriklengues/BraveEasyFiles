@@ -43,3 +43,7 @@ Os valores padrão ficam em `config.js`.
 
 - Só imagens da área de transferência; arquivos copiados no Explorer não ficam acessíveis ao navegador.
 - Sites que usam a File System Access API (`showOpenFilePicker`) abrem o seletor nativo normalmente.
+
+## Licença
+
+[MIT](LICENSE)
